@@ -1,3 +1,38 @@
+body {
+  background-color: rgb(236, 221, 183);
+}
 h1 {
-  color: pink;
+  color: rgb(80, 17, 27);
+  text-align: center;
+  font-size: 46px;
+}
+.grid {
+  width: 600px;
+  height: 600px;
+  border: 4px solid green;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.grid div {
+  width: 20px;
+  height: 20px;
+  border: 2px solid darkolivegreen;
+  box-sizing: border-box;
+}
+.lossMessage {
+  background-color: darkolivegreen;
+  border-radius: 10px;
+  width: 200px;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 325px;
+  left: 335px;
+}
+
+.snake {
+  background: rgb(248, 44, 197);
 }
