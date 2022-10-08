@@ -1,38 +1,125 @@
 body {
-  background-color: rgb(236, 221, 183);
-}
-h1 {
-  color: rgb(80, 17, 27);
-  text-align: center;
-  font-size: 46px;
-}
-.grid {
-  width: 600px;
-  height: 600px;
-  border: 4px solid green;
+  background-color: rgb(244, 255, 240, 1);
+  font-family: "Silkscreen", cursive;
   display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
 }
-.grid div {
-  width: 20px;
-  height: 20px;
-  border: 2px solid darkolivegreen;
-  box-sizing: border-box;
+#board {
+  display: grid;
+  grid-template-columns: 125px 125px 125px;
+  grid-template-rows: 125px 125px 125px;
+  cursor: pointer;
+  position: relative;
 }
-.lossMessage {
-  background-color: darkolivegreen;
-  border-radius: 10px;
-  width: 200px;
-  height: 125px;
+.tile {
+  color: rgb(124, 148, 116);
+  font-size: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 325px;
-  left: 335px;
+  font-size: 30px;
+}
+#playerInfo {
+  margin-top: 3%;
 }
 
-.snake {
-  background: rgb(248, 44, 197);
+h1 {
+  color: rgb(222, 21, 128, 1);
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.borderRight {
+  border-right: 4px solid rgb(222, 21, 128, 1);
+}
+
+.borderBottom {
+  border-bottom: 4px solid rgb(222, 21, 128, 1);
+}
+
+#strikeThrough {
+  position: absolute;
+  background-color: rgb(222, 21, 128, 1);
+}
+.strikeRow1 {
+  width: 100%;
+  height: 4px;
+  top: 16%;
+}
+.strikeRow2 {
+  width: 100%;
+  height: 4px;
+  top: 50%;
+}
+.strikeRow3 {
+  width: 100%;
+  height: 4px;
+  top: 83%;
+}
+.strikeColumn1 {
+  height: 100%;
+  width: 4px;
+  left: 15.5%;
+}
+.strikeColumn2 {
+  height: 100%;
+  width: 4px;
+  left: 49%;
+}
+.strikeColumn3 {
+  height: 100%;
+  width: 4px;
+  left: 83%;
+}
+.strikeDiagonal1 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(45deg);
+}
+.strikeDiagonal2 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(-45deg);
+}
+
+#lossMessage {
+  background-color: rgb(180, 214, 166, 1);
+  border: 4px solid rgb(124, 148, 116);
+  border-radius: 10px;
+  width: 40%;
+  height: 200px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  margin-top: 20px;
+}
+h2 {
+  font-size: 30px;
+}
+#playAgain {
+  font-family: "Silkscreen", cursive;
+  color: rgb(222, 21, 128, 1);
+  padding: 10px;
+  background-color: rgb(244, 255, 240, 1);
+  border: 4px solid rgb(222, 21, 128, 1);
+  border-radius: 10px;
+}
+.hideMessage {
+  display: none;
+}
+.showMessage {
+  display: block;
+  text-align: center;
+}
+.gameStart {
+  font-family: "Silkscreen", cursive;
+  background-color: #f5b9da;
+  border: 4px solid rgb(222, 21, 128, 1);
+  border-radius: 10px;
 }
