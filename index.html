@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <script defer src="index.js"></script>
-    <title>Arcade</title>
+    <title>Tic Tac Toe</title>
   </head>
   <body>
     <h1>Tic Tac Toe</h1>
@@ -29,23 +29,19 @@
       <div data-index="9" class="tile"></div>
       <div id="strikeThrough" class="strike"></div>
     </div>
-    <form id="playerInfo">
+    <form id="playerInfo" class="startScreen">
       <label for="xPlayer">Player 1 (X)</label>
-      <input type="text" id="xPlayer" name="xPlayer" />
+      <input type="text" id="xPlayer" name="xPlayer" /> <br />
+      <button type="button" id="onePlayer" class="gameStart">
+        start 1 player game!
+      </button>
+      <br />
       <label for="oPlayer">Player 2 (O)</label>
-      <input type="text" id="oPlayer" name="oPlayer" />
-      <input
-        type="submit"
-        id="twoPlayer"
-        class="gameStart"
-        value="start 2 player game!"
-      />
-      <input
-        type="submit"
-        id="onePlayer"
-        class="gameStart"
-        value="start 1 player game!"
-      />
+      <input type="text" id="oPlayer" name="oPlayer" /> <br />
+      <button type="button" id="twoPlayer" class="gameStart">
+        start 2 player game!
+      </button>
+      <br />
     </form>
     <div id="lossMessage" class="hideMessage">
       <h2 id="winnerMessage"></h2>
@@ -53,5 +49,3 @@
     </div>
   </body>
 </html>
-
-<!-- strikeRow1 strikeRow2 strikeRow3 strikeColumn1 strikeColumn2 strikeColumn3 -->
